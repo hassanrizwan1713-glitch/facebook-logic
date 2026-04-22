@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Form Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h2>facebook</h2>
+
+    <input type="text" id="emailInput" placeholder="Email address or phone number" oninput="readFields()" />
+    <input type="password" id="passInput" placeholder="Password" oninput="readFields()" />
+
+    <button class="btn-login" onclick="submitForm()" >Log in</button>
+
+    <div class="forgot"><a href="#">Forgotten password?</a></div>
+
+    <hr />
+
+    <button class="btn-signup" onclick="createAccount()">Create new account</button>
+
+    <div class="output-box" id="outputBox">
+      <p><strong>Field values (live read):</strong></p>
+      <p>Email / Phone: <span id="outEmail"></span></p>
+      <p>Password length: <span id="outPass"></span></p>
+    </div>
+
+    <div class="alert-box" id="alertBox"></div>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
